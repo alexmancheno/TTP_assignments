@@ -1,0 +1,28 @@
+body {
+  background-color: beige;
+}
+
+h1, h2 {
+  font-family: Georgia;
+  text-align: center;
+}
+
+h1 {
+  color: darkgreen;
+}
+
+p {
+  line-height: 19px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}

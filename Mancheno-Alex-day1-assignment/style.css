@@ -1,0 +1,54 @@
+* {
+  border
+}
+
+
+body {
+  background-image: url(background.jpg);
+}
+
+h2 {
+  font-size: 200%;
+  font-weight: bold;
+  color: antiquewhite;
+}
+
+h3 {
+  font-size: 130%;
+}
+
+h4 {
+  font-size: 110%;
+}
+
+a {
+  text-decoration: none;
+  color: antiquewhite;
+}
+
+a:hover{
+  text-decoration: underline;
+}
+
+p {
+  line-height: 140%;
+}
+
+li {
+  list-style-type: none;
+  line-height: 140%;
+}
+
+img {
+  min-width: 20%;
+  min-height: 20%;
+  max-width: 25%;
+  max-height: 25%;
+  border-radius: 50%;
+}
+
+.homepage {
+  color: antiquewhite;
+  font-family: monospace;
+  text-align: center;
+}
