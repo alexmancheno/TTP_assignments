@@ -1,0 +1,74 @@
+
+
+body {
+  background-color: indianred;
+  color: antiquewhite;
+}
+
+a {
+  text-decoration: none;
+  color: antiquewhite;
+}
+
+a:hover{
+  text-decoration: underline;
+}
+
+p {
+  line-height: 140%;
+}
+
+li {
+  list-style-type: none;
+  line-height: 140%;
+}
+
+.image {
+  min-width: 30%;
+  min-height: 30%;
+  max-width: 50%;
+  max-height: 50%;
+  width: auto;
+  height: auto;
+}
+
+.grid {
+  width: 500px;
+  float: left;
+}
+
+.propic {
+  min-width: 25%;
+  min-height: 25%;
+  max-width: 32%;
+  max-height: 32%;
+  border-radius: 70%;
+}
+
+.current_page {
+  font-color: antiquewhite;
+}
+
+.menubar {
+  float: right;
+}
+
+.menuitem {
+
+}
+
+.website_title {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 220%;
+}
+
+.page_title {
+  font-size: 140%;
+}
+
+.homepage {
+  color: antiquewhite;
+  font-family: monospace;
+  text-align: left;
+}
