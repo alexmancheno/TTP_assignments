@@ -1,9 +1,9 @@
-
+/* layout for desktops ( pixels > 1024px)*/
 
 body {
-  background-color: indianred;
-  color: antiquewhite;
-}
+    background-color: indianred;
+    color: antiquewhite;
+  }
 
 a {
   text-decoration: none;
@@ -24,17 +24,14 @@ li {
 }
 
 .image {
-  min-width: 30%;
-  min-height: 30%;
-  max-width: 50%;
-  max-height: 50%;
-  width: auto;
   height: auto;
+  width: 20%;
+  display: inline-block;
+  padding: 10px;
 }
 
 .grid {
-  width: 500px;
-  float: left;
+  text-align: center;
 }
 
 .propic {
@@ -43,18 +40,11 @@ li {
   max-width: 32%;
   max-height: 32%;
   border-radius: 70%;
-}
-
-.current_page {
-  font-color: antiquewhite;
+  display: block;
 }
 
 .menubar {
   float: right;
-}
-
-.menuitem {
-
 }
 
 .website_title {
@@ -64,11 +54,55 @@ li {
 }
 
 .page_title {
+  border: solid tan 2px;
   font-size: 140%;
+  background-color: orange;
+  padding: 0px 0px;
+}
+
+.article_pic {
+  width: 50%;
+  float: left;
+  padding-right: 0.8em;
+
 }
 
 .homepage {
   color: antiquewhite;
   font-family: monospace;
   text-align: left;
+}
+
+
+/* Smartphones*/
+@media only screen and (max-device-width : 768px) {
+  body {
+    background-color: darkred;
+    text-align: center;
+  }
+
+  .propic {
+    text-align: center;
+    margin: auto;
+    width: 70%;
+  }
+
+  * {
+    height: auto;
+    width: auto;
+    font-size-adjust: auto;
+  }
+}
+
+/* Tablets*/
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+  body {
+    background-color: darkgray;
+  }
+
+  * {
+    height: auto;
+    width: auto;
+    font-size-adjust: auto;
+  }
 }
