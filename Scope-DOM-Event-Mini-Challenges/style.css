@@ -1,0 +1,22 @@
+
+#right_box, #left_box {
+  display: inline-block;
+}
+
+#left_box {
+  height: 88px;
+}
+
+.right_box {
+  float: right;
+}
+
+#unfriendly_headline {
+  display: block;
+}
+
+#box_with_listener {
+  height: 100px;
+  width: 100px;
+  background-color: gray;
+}
