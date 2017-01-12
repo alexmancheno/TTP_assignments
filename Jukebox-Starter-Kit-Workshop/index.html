@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Webplayer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <audio src="" id="audio"></audio>
+
+
+  <div id="song_title_container">
+    <h3 id="song_title_header">Current song:</h3>
+  </div>
+  <div id="button_container">
+    <button class="button" onclick="jukebox.previous();">Previous</button>
+    <button class="button" onclick="jukebox.play();">Play</button>
+    <button class="button" onclick="jukebox.pause();">Pause</button>
+    <button class="button" onclick="jukebox.next()">Next</button>
+  </div>
+  <div id="song_list_container">
+
+  </div>
+  <script src="jukebox.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -14,7 +14,6 @@ function buttonWar(e) {
     document.getElementById("right-text").innerHTML = "No, I'm right!";
   }
 }
-
 left_button.addEventListener("click", buttonWar);
 right_button.addEventListener("click", buttonWar);
 
@@ -31,7 +30,7 @@ function displayKey(e) {
 }
 document.addEventListener("keypress", displayKey);
 
-/*Problem 4:*/
+/*Problem 4:*/å
 function checkForm(e) {
   e.preventDefault();
   var username = document.getElementById("username").value;
@@ -56,5 +55,5 @@ function checkForm(e) {
     document.getElementById("ask_user_header").innerText = "Hello, " + username;
   }
 }
-
+document 
 document.getElementById("login_fields").addEventListener("submit", checkForm);
