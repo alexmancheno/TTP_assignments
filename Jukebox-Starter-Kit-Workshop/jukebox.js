@@ -1,8 +1,6 @@
 function Jukebox() {
     var songs = [
-        {path: "./songs/Don't-Let-Me-Down.mp3", song_title: "Don't Let Me Down"},
-        {path: "./songs/Get-Back.mp3", song_title: "Get Back"},
-        {path: "./songs/Hate-It-Here.mp3", song_title: "Hate It Here"}
+
     ];
     var index = 0;
     this.audio = document.getElementById('audio');
@@ -10,19 +8,23 @@ function Jukebox() {
 
     audio.setAttribute("src", songs[index].path);
 
-    function update_song_title () {
+    this.update_song_title = function () {
         song_title_header.innerHTML = "Current song: " + songs[index].song_title;
+    }
+
+    this.add_song = function() {
+
     }
 
     this.play = function() {
         audio.play();
-        update_song_title();
+        this.update_song_title();
     }
     this.next = function() {
         index++;
         index = index % songs.length;
         audio.setAttribute("src", songs[index].path);
-        update_song_title();
+        this.update_song_title();
         audio.play();
     }
     this.pause = function() {
@@ -34,7 +36,7 @@ function Jukebox() {
             index = songs.length - 1;
         }
         audio.setAttribute("src", songs[index].path);
-        update_song_title();
+        this.update_song_title();
         audio.play();
     }
 }

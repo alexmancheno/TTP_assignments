@@ -10,20 +10,29 @@
 <body>
   <audio src="" id="audio"></audio>
 
+  <h1>Playlist</h1>
+  <ul id="song_list">
 
-  <div id="song_title_container">
-    <h3 id="song_title_header">Current song:</h3>
-  </div>
+  </ul>
+
+  <form action="" id="search_field">
+    <input type="text" placeholder="Enter a song:">
+    <button class="button" onclick="jukebox.add_song();"
+  </form>
+
+
   <div id="button_container">
     <button class="button" onclick="jukebox.previous();">Previous</button>
     <button class="button" onclick="jukebox.play();">Play</button>
     <button class="button" onclick="jukebox.pause();">Pause</button>
     <button class="button" onclick="jukebox.next()">Next</button>
   </div>
-  <div id="song_list_container">
 
-  </div>
+  <script
+    src="http://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
   <script src="jukebox.js"></script>
-  <script src="script.js"></script>
+
 </body>
 </html>
