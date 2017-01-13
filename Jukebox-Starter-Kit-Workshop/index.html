@@ -4,27 +4,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Webplayer</title>
+  <title>Alex's Webplayer</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <audio src="" id="audio"></audio>
 
   <h1>Playlist</h1>
   <ul id="song_list">
 
   </ul>
 
-  <form action="" id="search_field">
-    <input type="text" placeholder="Enter a song:">
-    <button class="button" onclick="jukebox.add_song();"
-  </form>
+  <audio src="" id="audio"></audio>
 
+  <div id="add_song_container">
+    <input type="text" placeholder="Enter a song:" id="search_field">
+    <button class="button" onclick="jukebox.add_song();">Add Song</button>
+  </div>
+
+  <h4 id="song_title_header">Current song: </h4>
 
   <div id="button_container">
     <button class="button" onclick="jukebox.previous();">Previous</button>
-    <button class="button" onclick="jukebox.play();">Play</button>
-    <button class="button" onclick="jukebox.pause();">Pause</button>
+    <button class="button" onclick="jukebox.pause_or_play();">Pause/Play</button>
     <button class="button" onclick="jukebox.next()">Next</button>
   </div>
 
