@@ -8,35 +8,46 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <audio src="" id="audio" onended="jukebox.next();"></audio>
 
-  <h1>Playlist</h1>
-  <ol id="song_list">
+  <h1 id="page_title">Create your playlist!</h1>
 
-  </ol>
+  <div id="media_player_container">
+    <div class="column" id="controls_container">
+      <div id="current_song_information">
+        <h4 id="song_title_header">Current song: </h4>
+      </div>
 
-  <audio src="" id="audio"></audio>
+      <div id="image_container">
+        <img id="current_image" src="" alt="">
+      </div>
 
-  <div id="add_song_container">
-    <input type="text" placeholder="Enter a song:" id="search_field">
-    <button class="button" onclick="jukebox.add_song();">Add Song</button>
+      <div id="button_container">
+        <button class="button" onclick="jukebox.previous();"><i class="fa fa-step-backward" aria-hidden="true"></i></button>
+
+        <button class="button" id="pause_or_play_button" onclick="jukebox.pause_or_play();"><i class="fa fa-play" aria-hidden="true"></i></button>
+
+        <button class="button" onclick="jukebox.next();"><i class="fa fa-step-forward" aria-hidden="true"></i></button>
+
+        <button class="button" id="shuffle_button" onclick="jukebox.toggle_shuffle();"><i class="fa fa-random" aria-hidden="true"></i></button>
+      </div>
+
+      <div id="slider_container">
+        <input id="volume_slider" type="range" min="0" max="100" step="1" oninput="jukebox.set_volume(this.value);" onchange="jukebox.set_volume(this.value);"></input>
+      </div>
+    </div>
+
+    <div class="column" id="playlist_container">
+      <h3>Current Playlist:</h3>
+      <ol id="song_list"></ol>
+    </div>
+
+    <div class="column" id="add_song_container">
+      <input type="text" placeholder="Enter a song:" id="search_field">
+      <button class="button" id="add_song_buttoin" onclick="jukebox.add_song();">Add Song</button>
+    </div>
   </div>
-
-  <h4 id="song_title_header">Current song: </h4>
-
-  <div id="button_container">
-
-    <button class="button" onclick="jukebox.previous();">
-<i class="fa fa-step-backward" aria-hidden="true"></i></button>
-
-    <button class="button" id="pause_or_play_button" onclick="jukebox.pause_or_play();"><i class="fa fa-play" aria-hidden="true"></i></button>
-
-    <button class="button" onclick="jukebox.next();"><i class="fa fa-step-forward" aria-hidden="true"></i></button>
-
-    <button class="button" id="shuffle_button" onclick="jukebox.toggle_shuffle();"><i class="fa fa-random" aria-hidden="true"></i></button>
-  </div>
-  <div id="slider_container">
-    <input id="test" type="range"/>
-  </div>
+  <div class="clear"></div>
 
   <script src="https://use.fontawesome.com/5276110f7f.js"></script>
   <script

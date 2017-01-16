@@ -46,7 +46,6 @@ function Jukebox() {
     }
 
     this.pause_or_play = function() {
-
         if (playlist.length !== 0)
             if (!currently_playing) {
                 audio.play();
@@ -100,6 +99,10 @@ function Jukebox() {
             }
         }
     }
-}
 
+    this.set_volume = function(val) {
+        audio.volume = val / 100;
+    }
+
+}
 var jukebox = new Jukebox();
