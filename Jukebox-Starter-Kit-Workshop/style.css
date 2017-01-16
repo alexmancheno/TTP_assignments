@@ -46,6 +46,6 @@ body {
 	margin: auto;
 }
 
-#add_song_button {
-	width: 100%;
+#volume_slider {
+	width: 80%;
 }

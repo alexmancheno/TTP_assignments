@@ -2,6 +2,7 @@
 function Jukebox() {
     var playlist = [];
     var index = 0;
+    var track_id = 0;
     var currently_playing = false;
     var on_shuffle = false;
     var audio = document.getElementById('audio');
@@ -21,7 +22,13 @@ function Jukebox() {
                             song: response.tracks.items[0].name,
                             url: response.tracks.items[0].preview_url
                         });
-                        document.getElementById('song_list').innerHTML += "<li>" + playlist[playlist.length - 1].artist + " - " + playlist[playlist.length - 1].song + "</li>";
+
+                        document.getElementById('song_list').innerHTML += "<li class=\"remove_song_icon\"id="+ track_id +">"
+                        + playlist[playlist.length - 1].artist + " - " + playlist[playlist.length - 1].song
+                        + "     <i class=\"fa fa-times\" aria-hidden=\"true\" onclick=\"jukebox.remove_song();\"></i>" + "</li>";
+
+                        track_id++;
+
                         document.getElementById('search_field').value = "";
                         if (playlist.length === 1) {
                             audio.setAttribute("src", playlist[index].url)
@@ -31,7 +38,11 @@ function Jukebox() {
             })
     }
 
-    this.update_song_title = function () {
+    this.remove_song = function() {
+        console.log("remove_song feature coming soon!");
+    }
+
+    this.update_song_title = function() {
         song_title_header.innerHTML = "Current song: " + playlist[index].song + " by " + playlist[index].artist;
     }
 
@@ -50,15 +61,14 @@ function Jukebox() {
             if (!currently_playing) {
                 audio.play();
                 currently_playing = true;
-                document.getElementById('id');
-                document.getElementById('pause_or_play_button').innerHTML = "<i class=\"fa fa-pause\" aria-hidden=\"true\"></i>"
+                document.getElementById('pause_or_play_button').innerHTML = "<i class=\"fa fa-pause\" aria-hidden=\"true\"></i>";
                 this.update_song_title();
             } else {
                 audio.pause();
                 currently_playing = false;
                 document.getElementById('pause_or_play_button').innerHTML = "<i class=\"fa fa-play\" aria-hidden=\"true\"></i>"
             }
-        }
+    }
 
     this.next = function() {
         if (playlist.length !== 0) {
@@ -66,7 +76,7 @@ function Jukebox() {
                 do {
                     var temp = index;
                     index = Math.floor(Math.random() * playlist.length);
-                } while (temp === index);
+                } while (temp === index && playlist.length > 1);
             } else {
                 index++;
                 index %= playlist.length;
@@ -85,7 +95,7 @@ function Jukebox() {
                 do {
                     var temp = index;
                     index = Math.floor(Math.random() * playlist.length);
-                } while (temp === index);
+                } while (temp === index && playlist.length > 1);
             } else {
                 index--;
                 if (index < 0) {
