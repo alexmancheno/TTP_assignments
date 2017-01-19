@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Homepage</title>
+</head>
+<body>
+  <div id="homepage">
+    <div id="post_message">
+      <form action="/" method="post">
+        <div>
+          <input class="block" type="text" name="title">
+        </div>
+        <div>
+          <textarea class="block" name="body" id="" cols="30" rows="10"></textarea>
+        </div>
+        <div>
+          <input class="block" type="submit" value="Post Message">
+        </div>
+      </form>
+    </div>
+    <div id="message_list">
+      <ol>
+        <% for (var i = 0; i < data.length; i++) { %>
+          <li><a href=<%="/message/" + data[i].id %>><%=data[i].title%></a></li>
+        <% } %>
+      </ol>
+    </div>
+  </div>
+</body>
+</html>
