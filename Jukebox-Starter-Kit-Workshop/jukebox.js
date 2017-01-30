@@ -39,7 +39,7 @@ function Jukebox() {
     }
 
     this.remove_song = function() {
-        console.log("remove_song feature coming soon!");
+        console.log("remove_song feature coming soon!!");
     }
 
     this.update_song_title = function() {
